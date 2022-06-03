@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Route>
+        <Route path='/'>
           <Home />
         </Route>
       </Router>
