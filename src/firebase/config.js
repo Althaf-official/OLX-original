@@ -12,4 +12,4 @@ const firebaseConfig = {
   };
 
   // then need pass the firebase and export it save it as a variable
-export const Firebase= firebase.initializeApp(firebaseConfig)
+export default firebase.initializeApp(firebaseConfig)
