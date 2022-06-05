@@ -10,11 +10,18 @@ export default function Signup() {
   const [email,setEmail] = useState('');// 
   const [phone,setPhone] =useState('');
   const [password,setPassword] =useState('')
+
+  // now i need send the data through a button click(means signup button) to firebase
+  const handleSubmit=(e)=>{
+    e.preventDefault()//prevent the page from refreshing
+    console.log(username)//succesfully console the data using state
+  }
+
   return (
     <div>
       <div className="signupParentDiv">
         <img width="200px" height="200px" src={Logo}></img>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />
           <input
