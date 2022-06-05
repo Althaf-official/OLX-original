@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState ,useContext} from 'react';//&we need use the context that we created as (FirebaseContext). so i will import here also
+//*now we have all the data stored in the State so now we need upload the data into firebase
+
 
 import Logo from '../../olx-logo.png';
+import { FirebaseContext } from '../../store/FirebaseContext';
 import './Signup.css';
 
 export default function Signup() {
@@ -11,10 +14,13 @@ export default function Signup() {
   const [phone,setPhone] =useState('');
   const [password,setPassword] =useState('')
 
+  //~now we use the context so we will return as a object.so we need deconstruct that
+  const {firebase}=useContext(FirebaseContext) //*now i destructured as a {firebase}
+
   // now i need send the data through a button click(means signup button) to firebase
   const handleSubmit=(e)=>{
     e.preventDefault()//prevent the page from refreshing
-    console.log(username)//succesfully console the data using state
+    console.log(firebase)//succesfully console the data using state
   }
 
   return (

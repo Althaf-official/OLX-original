@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+import firebase from "firebase/compat/app";
 //take the sdk and configuration from firebase.com>project settings>config  then copy the data
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
